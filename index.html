@@ -3,99 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finca de Eventos | Bodas y Celebraciones</title>
+    <title>Tu Finca de Eventos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="cabecera">
-        <div class="logo">Finca La Esperanza</div> <nav class="menu">
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#nosotros">La Finca</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#lugar">Lugar</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
+    <header class="navbar">
+        <div class="logo">NOMBRE FINCA</div>
+        <nav>
+            <a href="#">INICIO</a>
+            <a href="#">SERVICIOS</a>
+            <a href="#">CONTACTO</a>
         </nav>
     </header>
 
-    <section id="inicio" class="seccion-inicio">
-        <div class="contenido-inicio">
-            <h1>Celebra momentos inolvidables</h1>
-            <p>Un entorno natural y exclusivo para bodas, eventos y celebraciones privadas.</p>
-            <a href="#contacto" class="boton-principal">Pedir Información</a>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Titulo principal de pagina inicio</h1>
+            <p>Subtitulo que pegue con nuestro titulo.</p>
+            <button>Mas información</button>
+        </div>
+        <div class="hero-image">
+            <div class="img-placeholder">ESPACIO PARA FOTO</div>
         </div>
     </section>
 
-    <section id="nosotros" class="seccion-nosotros">
-        <div class="contenedor">
-            <h2>Un espacio con encanto</h2>
-            <p>Nuestra finca cuenta con amplios jardines, zonas al aire libre y salones perfectamente acondicionados. Es el lienzo en blanco perfecto para que diseñes el evento de tus sueños, rodeado de naturaleza y con total privacidad.</p>
+    <section class="galeria">
+        <h2>Nuestros Espacios</h2>
+        <div class="grid-container">
+            <div class="grid-item">Espacio 1</div>
+            <div class="grid-item">Espacio 2</div>
+            <div class="grid-item">Espacio 3</div>
         </div>
     </section>
 
-    <section id="servicios" class="seccion-servicios">
-        <h2>¿Qué ofrecemos?</h2>
-        <div class="grid-servicios">
-            <div class="tarjeta-servicio">
-                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Bodas">
-                <h3>Bodas Exclusivas</h3>
-                <p>Ceremonias civiles, banquetes al aire libre y barra libre. Todo adaptado a los novios.</p>
-            </div>
-            <div class="tarjeta-servicio">
-                <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Eventos corporativos">
-                <h3>Eventos de Empresa</h3>
-                <p>Presentaciones de producto, cenas de gala y actividades de Team Building.</p>
-            </div>
-            <div class="tarjeta-servicio">
-                <img src="https://images.unsplash.com/photo-1530103862676-de8892b07439?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Fiestas privadas">
-                <h3>Fiestas Privadas</h3>
-                <p>Cumpleaños, bautizos, comuniones y reuniones familiares en un entorno seguro y amplio.</p>
-            </div>
-        </div>
+    <section class="historia">
+        <h2>Una frase con enganche</h2>
+        <p>Breve descripción del sitio, como puede ser el aforo, los metros de terreno, etc...</p>
     </section>
-
-    <section id="lugar" class="seccion-lugar">
-        <div class="contenedor">
-            <h2>Nuestra Ubicación</h2>
-            <p>Nos encontramos en un enclave privilegiado, a pocos minutos de la ciudad pero rodeados de paz.</p>
-            
-            <div class="mapa-contenedor">
-                <div class="mapa-falso">
-                    <p>📍 Aquí irá el mapa interactivo de Google Maps</p>
-                    <p><i>(Calle Ejemplo, 123, Ciudad, Provincia)</i></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contacto" class="seccion-contacto">
-        <h2>Contacta con nosotros</h2>
-        <p>¿Quieres venir a ver la finca? Escríbenos y agendamos una visita sin compromiso.</p>
-        
-        <form id="formulario-contacto" class="formulario">
-            <div class="grupo-input">
-                <input type="text" id="nombre" placeholder="Tu Nombre y Apellidos" required>
-            </div>
-            <div class="grupo-input">
-                <input type="email" id="email" placeholder="Tu Correo Electrónico" required>
-            </div>
-            <div class="grupo-input">
-                <input type="tel" id="telefono" placeholder="Tu Teléfono" required>
-            </div>
-            <div class="grupo-input">
-                <textarea id="mensaje" rows="4" placeholder="Cuéntanos un poco sobre tu evento (fecha aproximada, número de invitados...)" required></textarea>
-            </div>
-            <button type="submit" class="boton-principal">Enviar Solicitud</button>
-        </form>
-    </section>
-
-    <footer class="pie-pagina">
-        <p>&copy; 2026 Finca La Esperanza. Todos los derechos reservados.</p>
-        <p>Teléfono: +34 600 000 000 | Email: info@fincaejemplo.com</p>
-    </footer>
 
     <script src="js/main.js"></script>
 </body>
