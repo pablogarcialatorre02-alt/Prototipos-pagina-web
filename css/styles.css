@@ -1,9 +1,5 @@
-/* --- LIMPIEZA Y FUENTES --- */
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-}
+/* --- CONFIGURACIÓN GENERAL --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body { 
     font-family: 'Montserrat', sans-serif; 
@@ -22,12 +18,7 @@ body {
     border-bottom: 1px solid #eee;
 }
 
-.navbar .logo { 
-    font-family: 'Playfair Display', serif; 
-    font-weight: 700; 
-    font-size: 1.5rem; 
-    letter-spacing: 1px;
-}
+.navbar .logo { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.5rem; }
 
 .navbar nav a {
     text-decoration: none;
@@ -49,76 +40,50 @@ body {
     padding: 100px 10%;
     background: #2a3a2a; 
     color: white;
-    min-height: 80vh;
+    min-height: 70vh;
 }
 
-.hero-content { 
-    flex: 1; 
-    padding-right: 50px; 
-    animation: fadeIn 1.5s ease-out forwards;
-}
+.hero-content { flex: 1; padding-right: 50px; animation: fadeIn 1.5s ease-out; }
+.hero-content h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 20px; }
 
-.hero-content h1 { 
-    font-family: 'Playfair Display', serif; 
-    font-size: 3.5rem; 
-    margin-bottom: 20px; 
-    line-height: 1.1;
-}
-
-.hero-content p {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-    opacity: 0.9;
-}
-
-/* --- BOTÓN PREMIUM --- */
+/* --- BOTÓN --- */
 button {
     padding: 18px 40px;
     background: transparent;
     color: white;
     border: 1px solid #d4a373;
     cursor: pointer;
-    font-weight: 400;
-    letter-spacing: 1px;
-    transition: all 0.4s ease;
     text-transform: uppercase;
+    transition: 0.4s;
 }
 
-button:hover { 
-    background: #d4a373;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+button:hover { background: #d4a373; }
+
+/* --- GALERÍA (CSS GRID) --- */
+.galeria { padding: 80px 10%; text-align: center; }
+.galeria h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 40px; }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
-/* --- IMAGEN CON ANIMACIÓN --- */
-.hero-image { 
-    flex: 1; 
-    display: flex; 
-    justify-content: center;
-    animation: fadeIn 1.5s ease-out forwards;
-}
-
-.img-placeholder {
-    width: 100%;
-    max-width: 450px;
-    height: 350px;
-    background: #3d503d;
+.grid-item {
+    background: #e0e0e0;
+    height: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 2px;
-    border: 1px solid rgba(255,255,255,0.1);
-    box-shadow: 20px 20px 0px rgba(0,0,0,0.1);
-    animation: pulse 3s infinite ease-in-out;
+    color: #888;
+    border-radius: 5px;
+    transition: 0.3s;
 }
+
+.grid-item:hover { transform: scale(1.02); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 
 /* --- ANIMACIONES --- */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes pulse {
-    0% { opacity: 0.7; }
-    50% { opacity: 1; }
-    100% { opacity: 0.7; }
 }
