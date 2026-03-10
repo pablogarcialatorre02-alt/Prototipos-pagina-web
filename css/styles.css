@@ -1,174 +1,266 @@
-/* Reseteo básico */
+/* Configuraciones básicas */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth; /* Hace que el menú baje suavemente */
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: #333;
     line-height: 1.6;
-    background-color: #faf9f6; /* Blanco roto/crema */
+    background-color: #fcfbf9; /* Un blanco un poco cálido */
 }
 
 h1, h2, h3, .logo {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Lora', serif; /* Fuente más elegante para los títulos */
 }
 
-/* Cabecera y Navegación */
-header {
-    background-color: #2c4c3b; /* Verde pino elegante */
-    color: white;
-    padding: 1rem 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #d4af37; /* Dorado */
-}
-
-/* Botones */
-.btn {
-    display: inline-block;
-    background-color: #d4af37;
-    color: #fff;
-    padding: 10px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.btn:hover {
-    background-color: #b5952f;
-}
-
-/* Sección Hero (Inicio) */
-.hero {
-    /* Aquí deberías poner una foto real de la finca de fondo */
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 20px;
 }
 
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 15px;
+/* --- CABECERA (Menú Arriba) --- */
+.cabecera {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    position: fixed; /* Se queda pegado arriba */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+.logo {
+    font-size: 1.8rem;
+    color: #2c4c3b; /* Verde oscuro */
+    font-weight: bold;
 }
 
-/* Sección Servicios */
-.servicios {
-    padding: 5rem 5%;
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #a38757; /* Color dorado/tierra */
+}
+
+/* --- BOTONES --- */
+.boton-principal {
+    display: inline-block;
+    background-color: #a38757;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 20px;
+}
+
+.boton-principal:hover {
+    background-color: #8a7146;
+}
+
+/* --- SECCIÓN INICIO (Portada) --- */
+.seccion-inicio {
+    height: 100vh;
+    background: linear-gradient(rgba(44, 76, 59, 0.6), rgba(44, 76, 59, 0.6)), url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding-top: 80px; /* Compensa el menú fijo */
+}
+
+.contenido-inicio h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.contenido-inicio p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- SECCIÓN NOSOTROS --- */
+.seccion-nosotros {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.seccion-nosotros h2 {
+    font-size: 2.5rem;
+    color: #2c4c3b;
+    margin-bottom: 20px;
+}
+
+.seccion-nosotros p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #666;
+}
+
+/* --- SECCIÓN SERVICIOS --- */
+.seccion-servicios {
+    padding: 80px 5%;
+    background-color: #f4f7f5; /* Verde muy clarito */
     text-align: center;
 }
 
-.servicios h2 {
+.seccion-servicios h2 {
     font-size: 2.5rem;
-    margin-bottom: 3rem;
     color: #2c4c3b;
+    margin-bottom: 40px;
 }
 
 .grid-servicios {
     display: flex;
-    gap: 2rem;
     justify-content: center;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
-.card {
+.tarjeta-servicio {
     background: white;
-    padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    flex: 1;
-    min-width: 250px;
-    max-width: 350px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    width: 300px;
+    transition: transform 0.3s;
 }
 
-.card h3 {
-    color: #2c4c3b;
-    margin-bottom: 1rem;
+.tarjeta-servicio:hover {
+    transform: translateY(-10px);
 }
 
-/* Sección Contacto */
-.contacto {
-    background-color: #e9ecef;
-    padding: 5rem 5%;
+.tarjeta-servicio img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tarjeta-servicio h3 {
+    color: #a38757;
+    margin: 20px 0 10px;
+    font-size: 1.5rem;
+}
+
+.tarjeta-servicio p {
+    padding: 0 20px 20px;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* --- SECCIÓN LUGAR --- */
+.seccion-lugar {
+    padding: 80px 20px;
     text-align: center;
+    background-color: #ffffff;
 }
 
-.contacto h2 {
+.seccion-lugar h2 {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
     color: #2c4c3b;
+    margin-bottom: 20px;
 }
 
-form {
-    max-width: 600px;
-    margin: 2rem auto 0;
+.mapa-contenedor {
+    margin-top: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mapa-falso {
+    background-color: #e2e8f0;
+    height: 400px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #94a3b8;
+    border-radius: 10px;
+    color: #64748b;
+    font-size: 1.2rem;
 }
 
-input, textarea {
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: inherit;
-    width: 100%;
-}
-
-/* Footer */
-footer {
+/* --- SECCIÓN CONTACTO --- */
+.seccion-contacto {
+    padding: 80px 20px;
     background-color: #2c4c3b;
     color: white;
     text-align: center;
-    padding: 1.5rem;
 }
 
-/* Adaptación para móviles */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    .hero h1 {
-        font-size: 2.5rem;
-    }
+.seccion-contacto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.formulario {
+    max-width: 600px;
+    margin: 40px auto 0;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.grupo-input {
+    margin-bottom: 20px;
+}
+
+.grupo-input input,
+.grupo-input textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+.formulario .boton-principal {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* --- FOOTER --- */
+.pie-pagina {
+    background-color: #1a2f24; /* Verde más oscuro aún */
+    color: #aaa;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9rem;
+}
+
+.pie-pagina p {
+    margin-bottom: 10px;
 }
