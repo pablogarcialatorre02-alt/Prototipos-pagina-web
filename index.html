@@ -3,32 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Finca de Eventos</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Finca Los Olivos | Eventos y Bodas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="logo">NOMBRE FINCA</div>
+    <header>
+        <div class="logo">Finca Los Olivos</div>
         <nav>
-            <a href="#">INICIO</a>
-            <a href="#">SERVICIOS</a>
-            <a href="#">CONTACTO</a>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
         </nav>
     </header>
 
-    <section class="hero">
+    <section id="inicio" class="hero">
         <div class="hero-content">
-            <h1>El lugar perfecto para tus eventos</h1>
-            <p>Descubre un espacio único rodeado de naturaleza y elegancia.</p>
-            <button>Solicitar Presupuesto</button>
-        </div>
-        <div class="hero-image">
-            <div class="img-placeholder">ESPACIO PARA FOTO</div>
+            <h1>El lugar perfecto para tu evento inolvidable</h1>
+            <p>Bodas, celebraciones y eventos corporativos en un entorno natural exclusivo.</p>
+            <a href="#contacto" class="btn">Solicitar Presupuesto</a>
         </div>
     </section>
 
-    <script src="js/main.js"></script>
+    <section id="servicios" class="servicios">
+        <h2>Nuestros Espacios y Servicios</h2>
+        <div class="grid-servicios">
+            <div class="card">
+                <h3>💍 Bodas de Ensueño</h3>
+                <p>Amplios jardines y salones rústicos para celebrar el día más importante de tu vida con total privacidad.</p>
+            </div>
+            <div class="card">
+                <h3>🎉 Fiestas Privadas</h3>
+                <p>Cumpleaños, aniversarios y reuniones familiares. Adaptamos el espacio a tus necesidades.</p>
+            </div>
+            <div class="card">
+                <h3>💼 Eventos de Empresa</h3>
+                <p>Jornadas de team building y cenas de empresa en un ambiente relajado y diferente.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+        <h2>Reserva tu Fecha</h2>
+        <p>Cuéntanos qué tienes en mente y nos pondremos en contacto contigo.</p>
+        <form id="formulario-contacto">
+            <input type="text" id="nombre" placeholder="Tu Nombre" required>
+            <input type="email" id="email" placeholder="Tu Correo Electrónico" required>
+            <input type="date" id="fecha" title="Fecha aproximada del evento">
+            <textarea id="mensaje" rows="5" placeholder="Háblanos sobre tu evento (número de invitados, tipo de celebración...)" required></textarea>
+            <button type="submit" class="btn">Enviar Mensaje</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Finca Los Olivos. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
