@@ -1,137 +1,59 @@
 /* --- CONFIGURACIÓN GENERAL --- */
+:root {
+    --color-fondo: #fcfaf8; /* Fondo crema suave para todo el sitio */
+    --color-nav-hero: #2a3a2a;
+    --color-acento: #d4a373;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+    --padding-base: 80px 10%;
+}
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Montserrat', sans-serif; background-color: #fdfdfd; color: #333; line-height: 1.6; }
+
+body { font-family: var(--font-body); background-color: var(--color-fondo); color: #333; line-height: 1.6; }
+
+h1, h2, h3 { font-family: var(--font-heading); }
 
 /* --- CABECERA --- */
-.navbar { display: flex; justify-content: space-between; align-items: center; padding: 25px 10%; background: #ffffff; border-bottom: 1px solid #eee; }
-.navbar .logo { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.5rem; }
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 10%; background: #ffffff; border-bottom: 1px solid #eee; }
+.navbar .logo { font-weight: 700; font-size: 1.5rem; }
 .navbar nav a { text-decoration: none; color: #555; margin-left: 30px; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; transition: 0.3s; }
-.navbar nav a:hover { color: #d4a373; }
+.navbar nav a:hover { color: var(--color-acento); }
 
-/* --- HERO (MODIFICADO PARA MÁS ANCHURA) --- */
-.hero { 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 100px 10%; 
-    background: #2a3a2a; 
-    color: white; 
-    min-height: 70vh; 
-    gap: 60px; /* Espacio extra entre texto e imagen */
-}
+/* --- BANNER PARA PÁGINAS INTERNAS --- */
+.header-interno { background: var(--color-nav-hero); color: white; padding: 60px 10%; text-align: center; }
 
+/* --- HERO (Página Inicio) --- */
+.hero { display: flex; align-items: center; padding: var(--padding-base); background: var(--color-nav-hero); color: white; min-height: 70vh; gap: 60px; }
 .hero-content { flex: 1; }
-.hero-content h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 20px; }
-
-/* Damos más espacio a la columna de la imagen */
+.hero-content h1 { font-size: 3.5rem; margin-bottom: 20px; }
 .hero-image { flex: 1.5; display: flex; justify-content: flex-end; }
+.img-placeholder { width: 100%; max-width: 600px; height: 400px; background: #3d503d; display: flex; align-items: center; justify-content: center; box-shadow: 20px 20px 0px rgba(0,0,0,0.1); }
 
-.btn-estilo { 
-    display: inline-block; padding: 18px 40px; background: transparent; color: white; 
-    border: 1px solid #d4a373; text-transform: uppercase; text-decoration: none; transition: 0.4s; 
+/* --- BOTONES --- */
+.btn-estilo, .boton-contacto { 
+    display: inline-block; padding: 18px 40px; border: 1px solid var(--color-acento); 
+    text-transform: uppercase; text-decoration: none; transition: 0.4s; cursor: pointer;
 }
-.btn-estilo:hover { background: #d4a373; }
+.btn-estilo { color: white; background: transparent; }
+.btn-estilo:hover { background: var(--color-acento); }
+.boton-contacto { background-color: var(--color-acento); color: white; border: none; border-radius: 5px; }
 
-/* Aquí está el tamaño aumentado del cuadro */
-.img-placeholder { 
-    width: 100%; 
-    max-width: 600px; /* Más ancho */
-    height: 400px;    /* Más alto */
-    background: #3d503d; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    box-shadow: 20px 20px 0px rgba(0,0,0,0.1); 
-}
+/* --- SECCIONES GRID --- */
+.galeria, .seccion-galeria { padding: var(--padding-base); }
+.grid-container, .grid-galeria { display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+.grid-item, .item-galeria { background: #e0e0e0; height: 300px; border-radius: 5px; transition: 0.4s; }
+.item-galeria:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); cursor: pointer; }
 
-/* --- GALERÍA --- */
+/* --- CONTACTO E INFO --- */
+.historia, .contacto-final, .contacto-pagina { padding: var(--padding-base); text-align: center; }
+.contacto-final { background: var(--color-nav-hero); color: white; }
+.form-contacto { display: flex; flex-direction: column; gap: 15px; margin-top: 40px; max-width: 600px; margin: 40px auto 0; }
+.form-contacto input, .form-contacto textarea { padding: 15px; border: 1px solid #ccc; font-family: var(--font-body); }
+.form-contacto button { background: var(--color-nav-hero); color: white; padding: 15px; border: none; text-transform: uppercase; cursor: pointer; }
 
-.galeria { padding: 80px 10%; text-align: center; }
-.grid-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.grid-item { background: #e0e0e0; height: 250px; display: flex; align-items: center; justify-content: center; color: #888; border-radius: 5px; }
-
-/* --- SECCIONES FINALES --- */
-.historia { padding: 80px 20%; text-align: center; background-color: #f9f9f9; }
-.contacto-final { padding: 80px 10%; text-align: center; background: #2a3a2a; color: white; }
-.boton-contacto { display: inline-block; padding: 20px 50px; background-color: #d4a373; color: white; text-decoration: none; text-transform: uppercase; border-radius: 5px; }
-
-/* --- ESTILO FORMULARIO --- */
-.contacto-pagina {
-    padding: 100px 20%;
-    text-align: center;
-}
-
-.contacto-pagina h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.form-contacto {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 40px;
-}
-
-.form-contacto input, 
-.form-contacto textarea {
-    padding: 15px;
-    border: 1px solid #ccc;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.form-contacto button {
-    background: #2a3a2a;
-    color: white;
-    padding: 15px;
-    border: none;
-    cursor: pointer;
-    text-transform: uppercase;
-}
-
-/* --- ESTILO SECCIÓN GALERÍA --- */
-.seccion-galeria {
-    padding: 80px 10%;
-    background-color: #f9f9f9; /* Mismo color que tu sección historia */
-}
-
-.seccion-galeria h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    color: #2a3a2a;
-    margin-bottom: 15px;
-}
-
-.boton-volver {
-    display: inline-block;
-    margin-bottom: 30px;
-    color: #d4a373; /* Color de acento de tu web */
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.9rem;
-    transition: 0.3s;
-}
-.boton-volver:hover {
-    color: #2a3a2a;
-}
-
-.grid-galeria {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 25px;
-    margin-top: 40px;
-}
-
-.item-galeria {
-    height: 300px;
-    background: #e0e0e0;
-    border-radius: 8px; /* Mantén el estilo suave pero limpio */
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.item-galeria:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-    cursor: pointer;
-}
+/* --- SECCIÓN INFORMACIÓN AJUSTADA --- */
+.seccion-info { padding: var(--padding-base); max-width: 900px; margin: 0 auto; }
+.seccion-info .bloque-texto { margin-bottom: 50px; }
+.seccion-info .bloque-texto h3 { margin-bottom: 20px; font-size: 1.8rem; }
+.seccion-info .bloque-texto p { line-height: 2.2; font-size: 1.1rem; color: #444; }
