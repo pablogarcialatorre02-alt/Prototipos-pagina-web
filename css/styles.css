@@ -54,3 +54,38 @@ body { font-family: 'Montserrat', sans-serif; background-color: #fdfdfd; color: 
 .historia { padding: 80px 20%; text-align: center; background-color: #f9f9f9; }
 .contacto-final { padding: 80px 10%; text-align: center; background: #2a3a2a; color: white; }
 .boton-contacto { display: inline-block; padding: 20px 50px; background-color: #d4a373; color: white; text-decoration: none; text-transform: uppercase; border-radius: 5px; }
+
+/* --- ESTILO FORMULARIO --- */
+.contacto-pagina {
+    padding: 100px 20%;
+    text-align: center;
+}
+
+.contacto-pagina h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.form-contacto input, 
+.form-contacto textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-contacto button {
+    background: #2a3a2a;
+    color: white;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
