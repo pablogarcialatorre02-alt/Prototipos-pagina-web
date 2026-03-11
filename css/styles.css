@@ -1,6 +1,5 @@
 /* --- CONFIGURACIÓN GENERAL --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
 body { font-family: 'Montserrat', sans-serif; background-color: #fdfdfd; color: #333; line-height: 1.6; }
 
 /* --- CABECERA --- */
@@ -9,32 +8,49 @@ body { font-family: 'Montserrat', sans-serif; background-color: #fdfdfd; color: 
 .navbar nav a { text-decoration: none; color: #555; margin-left: 30px; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; transition: 0.3s; }
 .navbar nav a:hover { color: #d4a373; }
 
-/* --- HERO SECTION --- */
-.hero { display: flex; justify-content: space-between; align-items: center; padding: 100px 10%; background: #2a3a2a; color: white; min-height: 70vh; }
-.hero-content { flex: 1; padding-right: 50px; animation: fadeIn 1.5s ease-out; }
-.hero-content h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 20px; }
-button { padding: 18px 40px; background: transparent; color: white; border: 1px solid #d4a373; cursor: pointer; text-transform: uppercase; transition: 0.4s; }
-button:hover { background: #d4a373; }
-.hero-image { flex: 1; display: flex; justify-content: center; }
-.img-placeholder { width: 100%; max-width: 450px; height: 350px; background: #3d503d; display: flex; align-items: center; justify-content: center; border-radius: 2px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 20px 20px 0px rgba(0,0,0,0.1); animation: pulse 3s infinite ease-in-out; }
+/* --- HERO (MODIFICADO PARA MÁS ANCHURA) --- */
+.hero { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 100px 10%; 
+    background: #2a3a2a; 
+    color: white; 
+    min-height: 70vh; 
+    gap: 60px; /* Espacio extra entre texto e imagen */
+}
 
-/* --- GALERÍA (CSS GRID) --- */
+.hero-content { flex: 1; }
+.hero-content h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 20px; }
+
+/* Damos más espacio a la columna de la imagen */
+.hero-image { flex: 1.5; display: flex; justify-content: flex-end; }
+
+.btn-estilo { 
+    display: inline-block; padding: 18px 40px; background: transparent; color: white; 
+    border: 1px solid #d4a373; text-transform: uppercase; text-decoration: none; transition: 0.4s; 
+}
+.btn-estilo:hover { background: #d4a373; }
+
+/* Aquí está el tamaño aumentado del cuadro */
+.img-placeholder { 
+    width: 100%; 
+    max-width: 600px; /* Más ancho */
+    height: 400px;    /* Más alto */
+    background: #3d503d; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    box-shadow: 20px 20px 0px rgba(0,0,0,0.1); 
+}
+
+/* --- GALERÍA --- */
 
 .galeria { padding: 80px 10%; text-align: center; }
-.galeria h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 40px; }
 .grid-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.grid-item { background: #e0e0e0; height: 250px; display: flex; align-items: center; justify-content: center; color: #888; border-radius: 5px; transition: 0.3s; }
-.grid-item:hover { transform: scale(1.02); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.grid-item { background: #e0e0e0; height: 250px; display: flex; align-items: center; justify-content: center; color: #888; border-radius: 5px; }
 
 /* --- SECCIONES FINALES --- */
 .historia { padding: 80px 20%; text-align: center; background-color: #f9f9f9; }
-.historia h2 { font-family: 'Playfair Display', serif; font-size: 2rem; color: #2a3a2a; margin-bottom: 20px; }
-.historia p { max-width: 800px; margin: 0 auto; color: #666; }
 .contacto-final { padding: 80px 10%; text-align: center; background: #2a3a2a; color: white; }
-.contacto-final h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 20px; }
-.boton-contacto { display: inline-block; padding: 20px 50px; background-color: #d4a373; color: white; text-decoration: none; text-transform: uppercase; border-radius: 5px; transition: 0.3s; }
-.boton-contacto:hover { background-color: #fff; color: #2a3a2a; }
-
-/* --- ANIMACIONES --- */
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes pulse { 0% { opacity: 0.7; } 50% { opacity: 1; } 100% { opacity: 0.7; } }
+.boton-contacto { display: inline-block; padding: 20px 50px; background-color: #d4a373; color: white; text-decoration: none; text-transform: uppercase; border-radius: 5px; }
