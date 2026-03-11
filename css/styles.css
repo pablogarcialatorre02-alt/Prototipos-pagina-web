@@ -89,3 +89,49 @@ body { font-family: 'Montserrat', sans-serif; background-color: #fdfdfd; color: 
     cursor: pointer;
     text-transform: uppercase;
 }
+
+/* --- ESTILO SECCIÓN GALERÍA --- */
+.seccion-galeria {
+    padding: 80px 10%;
+    background-color: #f9f9f9; /* Mismo color que tu sección historia */
+}
+
+.seccion-galeria h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #2a3a2a;
+    margin-bottom: 15px;
+}
+
+.boton-volver {
+    display: inline-block;
+    margin-bottom: 30px;
+    color: #d4a373; /* Color de acento de tu web */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+.boton-volver:hover {
+    color: #2a3a2a;
+}
+
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.item-galeria {
+    height: 300px;
+    background: #e0e0e0;
+    border-radius: 8px; /* Mantén el estilo suave pero limpio */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.item-galeria:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
