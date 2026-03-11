@@ -127,23 +127,21 @@ button:hover { background: #d4a373; }
     margin-bottom: 30px;
 }
 
-.datos-contacto {
-    background: white;
-    padding: 30px 50px;
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    display: inline-block; /* Ayuda a que se centre el recuadro blanco */
+/* --- FRANJA VERDE PARA LA DIRECCIÓN --- */
+.banda-direccion-verde {
+    background-color: #2a3a2a; /* Tu verde oscuro */
+    width: 100%;
+    padding: 40px 10%; /* Espacio por arriba y por abajo */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.datos-contacto h3 {
-    font-family: 'Playfair Display', serif;
-    color: #2a3a2a;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.datos-contacto p {
+.banda-direccion-verde p {
+    color: #ffffff; /* Letra blanca para que resalte en el verde */
     font-family: 'Montserrat', sans-serif;
-    color: #666;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
     margin: 0;
 }
