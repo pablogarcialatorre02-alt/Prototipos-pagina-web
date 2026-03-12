@@ -3,44 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Más Información - Finca de Eventos</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <title>Tu Finca de Eventos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
     <header class="navbar">
         <div class="logo">NOMBRE FINCA</div>
         <nav>
-<a href="index.html">INICIO</a>
+            <a href="index.html">INICIO</a>
+            <a href="informacion.html">MÁS INFORMACIÓN</a>
             <a href="galeria.html">GALERIA</a>
             <a href="lugar.html">DONDE ESTAMOS</a>
             <a href="contacto.html">CONTACTO</a>
         </nav>
     </header>
 
-    <section class="header-interno">
-        <h1>Detalles de Nuestra Finca</h1>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>El lugar perfecto para tu evento</h1>
+            <p>Descubre un entorno único donde la elegancia se encuentra con la naturaleza.</p>
+            <a href="informacion.html" class="btn-estilo">Mas Información</a>
+        </div>
+        <div class="hero-image">
+            <div class="img-placeholder">ESPACIO PARA FOTO</div>
+        </div>
     </section>
 
-    <main class="seccion-info">
-        <div class="bloque-texto">
-            <h3>Capacidad del recinto</h3>
-            <p>Caracteristicas principales de la finca, como puede ser aforo maximo y las diferentes actividades que podemos hacer</p>
+    <section class="galeria">
+    <h2>Nuestros Espacios</h2>
+    <div class="grid-container">
+        <div class="grid-item">Foto 1</div>
+        <div class="grid-item">Foto 2</div>
+        <div class="grid-item">Foto 3</div>
         </div>
+</section>
 
-        <div class="bloque-texto">
-            <h3>Parking y Accesibilidad</h3>
-            <p>Si hay posibilidad de aparcamiento o si hay aparcamiento en los alrededores</p>
-        </div>
+    <div class="hero-content" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+    <h2>Tu evento, un recuerdo inolvidable</h2>
+    <p>Descubre nuestros espacios únicos y diseñados para ti.</p>
+    
+    <a href="galeria.html" class="btn-galeria">Ver Galería</a>
+    </div>
 
-        <div class="bloque-texto">
-            <h3>Zonas para invitados</h3>
-            <p>Aqui pondremos toda la informacion referente a las zonas donde los clientes pueden estar</p>
-        </div>
-    </main>
+    <section class="contacto-final">
+        <h2>¿Quieres organizar tu evento?</h2>
+        <a href="contacto.html" class="boton-contacto">Contactar ahora</a>
+    </section>
 
-    <footer style="text-align: center; padding: 40px; background: #2a3a2a; color: white;">
-        <p>&copy; 2026 Nombre de tu Finca - Todos los derechos reservados.</p>
-    </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
