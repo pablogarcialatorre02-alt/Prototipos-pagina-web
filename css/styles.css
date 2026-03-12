@@ -92,3 +92,49 @@ h1, h2, h3 { font-family: var(--font-heading); }
 
 .seccion-info { padding: var(--padding-base); max-width: 900px; margin: 0 auto; }
 .seccion-info .bloque-texto { margin-bottom: 50px; }
+
+/* --- ANIMACIONES --- */
+
+/* 1. Definir la animación de "aparecer y subir" */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 2. Aplicar la animación a los elementos del Hero (Index) */
+.hero-content h1, .hero-content p, .btn-estilo {
+    opacity: 0; /* Empezamos invisibles */
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Retrasos para que no salga todo a la vez (efecto cascada) */
+.hero-content h1 { animation-delay: 0.2s; }
+.hero-content p  { animation-delay: 0.4s; }
+.btn-estilo      { animation-delay: 0.6s; }
+
+/* 3. Animación para los recuadros de la galería */
+.grid-item, .item-galeria {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Esto hace que las fotos aparezcan una tras otra */
+.grid-item:nth-child(1) { animation-delay: 0.3s; }
+.grid-item:nth-child(2) { animation-delay: 0.5s; }
+.grid-item:nth-child(3) { animation-delay: 0.7s; }
+.grid-item:nth-child(4) { animation-delay: 0.9s; }
+.grid-item:nth-child(5) { animation-delay: 1.1s; }
+.grid-item:nth-child(6) { animation-delay: 1.3s; }
+
+/* 4. Animación suave para el botón al pasar el ratón (Hover) */
+.btn-estilo:hover, .boton-contacto:hover {
+    transform: scale(1.05);
+    background-color: var(--color-acento);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
