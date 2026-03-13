@@ -1,4 +1,4 @@
-/* --- CONFIGURACIÓN GENERAL --- */
+/* --- 1. CONFIGURACIÓN GENERAL --- */
 :root {
     --color-fondo: #fcfaf8;
     --color-nav-hero: #2a3a2a;
@@ -9,31 +9,28 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
 body { font-family: var(--font-body); background-color: var(--color-fondo); color: #333; line-height: 1.6; }
-
 h1, h2, h3 { font-family: var(--font-heading); margin-bottom: 20px; }
 
-/* --- CABECERA --- */
+/* --- 2. CABECERA --- */
 .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 10%; background: #ffffff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
 .navbar .logo { font-weight: 700; font-size: 1.5rem; color: var(--color-nav-hero); }
 .navbar nav a { text-decoration: none; color: #555; margin-left: 30px; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; transition: 0.3s; }
 .navbar nav a:hover { color: var(--color-acento); }
 
-/* --- SECCIONES HERO --- */
+/* --- 3. SECCIONES HERO --- */
 .hero { display: flex; align-items: center; justify-content: center; padding: 100px 10%; background: var(--color-nav-hero); color: white; min-height: 60vh; text-align: center; }
 .hero-content { max-width: 800px; display: flex; flex-direction: column; align-items: center; }
 .hero-interno { background: var(--color-nav-hero); color: white; padding: 80px 10%; text-align: center; }
 
-/* --- CONTENEDORES --- */
+/* --- 4. CONTENEDORES --- */
 .contenedor-principal { padding: 60px 10%; max-width: 1000px; margin: 0 auto; }
 .galeria { padding: var(--padding-base); text-align: center; }
 .contacto-final { padding: 80px 10%; text-align: center; background: var(--color-nav-hero); color: white; }
-
-/* --- AJUSTE ESPECÍFICO (Para bajar el texto en Información) --- */
 .espacio-extra { padding-top: 150px !important; }
 
-/* --- BOTONES --- */
+/* --- 5. BOTONES --- */
+/* Estilos generales */
 .btn-estilo, .boton-contacto, .btn-galeria { 
     display: inline-block; padding: 18px 40px; text-transform: uppercase; text-decoration: none; 
     transition: 0.4s; cursor: pointer; border-radius: 5px; font-weight: 600; border: 1px solid var(--color-acento);
@@ -43,15 +40,37 @@ h1, h2, h3 { font-family: var(--font-heading); margin-bottom: 20px; }
 .boton-contacto, .btn-galeria { background-color: var(--color-acento); color: white; border: none; }
 .boton-contacto:hover, .btn-galeria:hover { background-color: #b5895e; transform: translateY(-3px); }
 
-/* --- GALERÍA GRID --- */
+/* BOTÓN ESPECÍFICO PARA EL INDEX (Centrado) */
+.btn-galeria-index { 
+    display: block !important; 
+    width: fit-content !important; 
+    margin: 30px auto 0 auto !important;
+    padding: 18px 40px; 
+    background-color: var(--color-acento); 
+    color: white; 
+    border: none; 
+    text-transform: uppercase; 
+    text-decoration: none;
+    transition: 0.4s; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    font-weight: 600;
+}
+
+.btn-galeria-index:hover { 
+    background-color: #b5895e; 
+    transform: translateY(-3px); 
+}
+
+/* --- 6. GALERÍA GRID --- */
 .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); justify-content: center; gap: 30px; margin-top: 40px; }
 .grid-item { background-color: #e0e0e0; height: 350px; border-radius: 8px; border: 1px solid #eee; display: flex; align-items: center; justify-content: center; transition: 0.4s; }
 .grid-item:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
 
-/* --- FORMULARIOS --- */
+/* --- 7. FORMULARIOS --- */
 .form-contacto { display: flex; flex-direction: column; gap: 15px; max-width: 600px; margin: 40px auto; }
 .form-contacto input, .form-contacto textarea { padding: 15px; border: 1px solid #ddd; border-radius: 5px; font-family: var(--font-body); }
 
-/* --- ANIMACIONES --- */
+/* --- 8. ANIMACIONES --- */
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 .grid-item, .hero-content h1, .hero-content p, .btn-estilo { animation: fadeInUp 1s ease-out forwards; }
