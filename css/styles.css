@@ -39,6 +39,16 @@ h1, h2, h3 { font-family: var(--font-heading); margin-bottom: 20px; }
 .boton-contacto, .btn-galeria { background-color: var(--color-acento); color: white; border: none; }
 .boton-contacto:hover, .btn-galeria:hover { background-color: #b5895e; transform: translateY(-3px); }
 
+/* Clase específica para botones sólidos (Contacto, etc.) */
+.btn-solido {
+    background-color: var(--color-acento) !important;
+    color: white !important;
+}
+.btn-solido:hover {
+    background-color: #b5895e !important;
+    border-color: #b5895e !important;
+}
+
 /* BOTÓN ESPECÍFICO PARA EL INDEX (Centrado) */
 .btn-galeria-index { 
     display: inline-block; 
