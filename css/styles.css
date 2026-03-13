@@ -30,7 +30,6 @@ h1, h2, h3 { font-family: var(--font-heading); margin-bottom: 20px; }
 .espacio-extra { padding-top: 150px !important; }
 
 /* --- 5. BOTONES --- */
-/* Estilos generales */
 .btn-estilo, .boton-contacto, .btn-galeria { 
     display: inline-block; padding: 18px 40px; text-transform: uppercase; text-decoration: none; 
     transition: 0.4s; cursor: pointer; border-radius: 5px; font-weight: 600; border: 1px solid var(--color-acento);
@@ -42,9 +41,8 @@ h1, h2, h3 { font-family: var(--font-heading); margin-bottom: 20px; }
 
 /* BOTÓN ESPECÍFICO PARA EL INDEX (Centrado) */
 .btn-galeria-index { 
-    display: block !important; 
-    width: fit-content !important; 
-    margin: 30px auto 0 auto !important;
+    display: inline-block; 
+    margin: 30px auto 0 auto;
     padding: 18px 40px; 
     background-color: var(--color-acento); 
     color: white; 
@@ -56,10 +54,16 @@ h1, h2, h3 { font-family: var(--font-heading); margin-bottom: 20px; }
     border-radius: 5px; 
     font-weight: 600;
 }
-
 .btn-galeria-index:hover { 
     background-color: #b5895e; 
     transform: translateY(-3px); 
+}
+
+.contenido-centrado {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 80px 10%;
 }
 
 /* --- 6. GALERÍA GRID --- */
